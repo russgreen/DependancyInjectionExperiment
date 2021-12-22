@@ -1,3 +1,3 @@
 # DependancyInjectionExperiment
 
-Small project to learn to use Dependancy Injection with multiple winforms in an app
+Small project to practice with while learning to use Dependancy Injection with multiple winforms in an app
