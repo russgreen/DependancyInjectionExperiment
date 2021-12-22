@@ -31,6 +31,7 @@ partial class Form2
             this.label1 = new System.Windows.Forms.Label();
             this.labelMessage2 = new System.Windows.Forms.Label();
             this.labelMessage1 = new System.Windows.Forms.Label();
+            this.labelMessage3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -61,11 +62,21 @@ partial class Form2
             this.labelMessage1.TabIndex = 3;
             this.labelMessage1.Text = "labelMessage1";
             // 
+            // labelMessage3
+            // 
+            this.labelMessage3.AutoSize = true;
+            this.labelMessage3.Location = new System.Drawing.Point(12, 142);
+            this.labelMessage3.Name = "labelMessage3";
+            this.labelMessage3.Size = new System.Drawing.Size(84, 15);
+            this.labelMessage3.TabIndex = 2;
+            this.labelMessage3.Text = "labelMessage3";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelMessage3);
             this.Controls.Add(this.labelMessage2);
             this.Controls.Add(this.labelMessage1);
             this.Controls.Add(this.label1);
@@ -81,4 +92,5 @@ partial class Form2
     private Label label1;
     private Label labelMessage2;
     private Label labelMessage1;
+    private Label labelMessage3;
 }

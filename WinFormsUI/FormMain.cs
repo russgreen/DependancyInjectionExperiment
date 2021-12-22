@@ -24,13 +24,15 @@ public partial class FormMain : Krypton.Toolkit.KryptonForm
     private void kryptonRibbonGroupButtonForm1_Click(object sender, EventArgs e)
     {
         Form frm = _serviceProvider.GetRequiredService<Form1>();
-        LoadFormIntoPanel(ref frm);
+        LoadFormIntoPanel(frm);
     }
 
     private void kryptonRibbonGroupButtonForm2_Click(object sender, EventArgs e)
     {
-        Form frm = _serviceProvider.GetRequiredService<Form2>();
-        LoadFormIntoPanel(ref frm);
+        Form2 frm = _serviceProvider.GetRequiredService<Form2>();
+        frm.DisplayMessages($"message created on {DateTime.UtcNow.ToLongTimeString()}");
+
+        LoadFormIntoPanel((Form)frm);
     }
 
     private void kryptonRibbonGroupButtonReloadSettings_Click(object sender, EventArgs e)
@@ -43,7 +45,7 @@ public partial class FormMain : Krypton.Toolkit.KryptonForm
         this.Close();
     }
 
-    private void LoadFormIntoPanel(ref Form frm)//, ref Panel pnl)
+    private void LoadFormIntoPanel(Form frm)//, ref Panel pnl)
     {
         //this.kryptonPanelMain.Controls.Clear();
         foreach (Form form in this.kryptonPanelMain.Controls)
