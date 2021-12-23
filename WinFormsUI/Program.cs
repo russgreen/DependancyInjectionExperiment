@@ -22,7 +22,9 @@ internal static class Program
                     .AddDemoServices(ConnectionString)
                     .AddTransient<FormMain>()
                     .AddTransient<Form1>()
-                    .AddTransient<Form2>();
+                    .AddTransient<Form2>()
+                    .AddTransient<Form4Factory>();
+
             });
 
         var host = builder.Build();

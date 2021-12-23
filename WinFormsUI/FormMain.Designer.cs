@@ -31,15 +31,19 @@ partial class FormMain
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.kryptonRibbon1 = new Krypton.Ribbon.KryptonRibbon();
-            this.kryptonContextMenuItemClose = new Krypton.Toolkit.KryptonContextMenuItem();
             this.kryptonRibbonTab1 = new Krypton.Ribbon.KryptonRibbonTab();
             this.kryptonRibbonGroup1 = new Krypton.Ribbon.KryptonRibbonGroup();
             this.kryptonRibbonGroupTriple1 = new Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.kryptonRibbonGroupButtonForm1 = new Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonRibbonGroupButtonForm2 = new Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonRibbonGroupButtonForm2a = new Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonRibbonGroupTriple3 = new Krypton.Ribbon.KryptonRibbonGroupTriple();
+            this.kryptonRibbonGroupButtonForm3 = new Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonRibbonGroupButtonForm4 = new Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonRibbonGroup2 = new Krypton.Ribbon.KryptonRibbonGroup();
             this.kryptonRibbonGroupTriple2 = new Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.kryptonRibbonGroupButtonReloadSettings = new Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonContextMenuItemClose = new Krypton.Toolkit.KryptonContextMenuItem();
             this.kryptonPanelMain = new Krypton.Toolkit.KryptonPanel();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonRibbon1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanelMain)).BeginInit();
@@ -63,14 +67,10 @@ partial class FormMain
             this.kryptonContextMenuItemClose});
             this.kryptonRibbon1.RibbonTabs.AddRange(new Krypton.Ribbon.KryptonRibbonTab[] {
             this.kryptonRibbonTab1});
+            this.kryptonRibbon1.SelectedContext = null;
             this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab1;
             this.kryptonRibbon1.Size = new System.Drawing.Size(950, 115);
             this.kryptonRibbon1.TabIndex = 1;
-            // 
-            // kryptonContextMenuItemClose
-            // 
-            this.kryptonContextMenuItemClose.Text = "Close";
-            this.kryptonContextMenuItemClose.Click += new System.EventHandler(this.kryptonContextMenuItemClose_Click);
             // 
             // kryptonRibbonTab1
             // 
@@ -83,14 +83,16 @@ partial class FormMain
             // 
             this.kryptonRibbonGroup1.DialogBoxLauncher = false;
             this.kryptonRibbonGroup1.Items.AddRange(new Krypton.Ribbon.KryptonRibbonGroupContainer[] {
-            this.kryptonRibbonGroupTriple1});
+            this.kryptonRibbonGroupTriple1,
+            this.kryptonRibbonGroupTriple3});
             this.kryptonRibbonGroup1.TextLine1 = "Forms";
             // 
             // kryptonRibbonGroupTriple1
             // 
             this.kryptonRibbonGroupTriple1.Items.AddRange(new Krypton.Ribbon.KryptonRibbonGroupItem[] {
             this.kryptonRibbonGroupButtonForm1,
-            this.kryptonRibbonGroupButtonForm2});
+            this.kryptonRibbonGroupButtonForm2,
+            this.kryptonRibbonGroupButtonForm2a});
             // 
             // kryptonRibbonGroupButtonForm1
             // 
@@ -103,6 +105,30 @@ partial class FormMain
             this.kryptonRibbonGroupButtonForm2.ImageLarge = ((System.Drawing.Image)(resources.GetObject("kryptonRibbonGroupButtonForm2.ImageLarge")));
             this.kryptonRibbonGroupButtonForm2.TextLine1 = "Form2";
             this.kryptonRibbonGroupButtonForm2.Click += new System.EventHandler(this.kryptonRibbonGroupButtonForm2_Click);
+            // 
+            // kryptonRibbonGroupButtonForm2a
+            // 
+            this.kryptonRibbonGroupButtonForm2a.ImageLarge = ((System.Drawing.Image)(resources.GetObject("kryptonRibbonGroupButtonForm2a.ImageLarge")));
+            this.kryptonRibbonGroupButtonForm2a.TextLine1 = "Form2a";
+            this.kryptonRibbonGroupButtonForm2a.Click += new System.EventHandler(this.kryptonRibbonGroupButtonForm2a_Click);
+            // 
+            // kryptonRibbonGroupTriple3
+            // 
+            this.kryptonRibbonGroupTriple3.Items.AddRange(new Krypton.Ribbon.KryptonRibbonGroupItem[] {
+            this.kryptonRibbonGroupButtonForm3,
+            this.kryptonRibbonGroupButtonForm4});
+            // 
+            // kryptonRibbonGroupButtonForm3
+            // 
+            this.kryptonRibbonGroupButtonForm3.ImageLarge = ((System.Drawing.Image)(resources.GetObject("kryptonRibbonGroupButtonForm3.ImageLarge")));
+            this.kryptonRibbonGroupButtonForm3.TextLine1 = "Form3";
+            this.kryptonRibbonGroupButtonForm3.Click += new System.EventHandler(this.kryptonRibbonGroupButtonForm3_Click);
+            // 
+            // kryptonRibbonGroupButtonForm4
+            // 
+            this.kryptonRibbonGroupButtonForm4.ImageLarge = ((System.Drawing.Image)(resources.GetObject("kryptonRibbonGroupButtonForm4.ImageLarge")));
+            this.kryptonRibbonGroupButtonForm4.TextLine1 = "Form4";
+            this.kryptonRibbonGroupButtonForm4.Click += new System.EventHandler(this.kryptonRibbonGroupButtonForm4_Click);
             // 
             // kryptonRibbonGroup2
             // 
@@ -122,6 +148,11 @@ partial class FormMain
             this.kryptonRibbonGroupButtonReloadSettings.TextLine1 = "Reload";
             this.kryptonRibbonGroupButtonReloadSettings.TextLine2 = "Settings";
             this.kryptonRibbonGroupButtonReloadSettings.Click += new System.EventHandler(this.kryptonRibbonGroupButtonReloadSettings_Click);
+            // 
+            // kryptonContextMenuItemClose
+            // 
+            this.kryptonContextMenuItemClose.Text = "Close";
+            this.kryptonContextMenuItemClose.Click += new System.EventHandler(this.kryptonContextMenuItemClose_Click);
             // 
             // kryptonPanelMain
             // 
@@ -165,4 +196,8 @@ partial class FormMain
     private Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButtonForm2;
     private Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple2;
     private Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButtonReloadSettings;
+    private Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButtonForm2a;
+    private Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple3;
+    private Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButtonForm3;
+    private Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButtonForm4;
 }
