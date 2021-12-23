@@ -13,7 +13,7 @@ Required parameters (values not known when the form is added to the DI system) a
 As above but this time forgetting to pass in the required parameters.
 
 ## Form3
-Instead of Form3 being in the DI system the forms dependancies are passed intot he ctor as parameters.  
+Instead of Form3 being in the DI system the forms dependancies are passed into the ctor as parameters.  
 
 Feels a bit more winformy to me!
 
